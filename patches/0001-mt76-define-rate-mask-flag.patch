@@ -1,0 +1,13 @@
+--- a/src/mt76.h
++++ b/src/mt76.h
+@@ -15,7 +15,11 @@
+ #include <linux/version.h>
+ #include <linux/soc/mediatek/mtk_wed.h>
+ #include <net/mac80211.h>
++#ifndef IEEE80211_TX_CTRL_DONT_USE_RATE_MASK
++#define IEEE80211_TX_CTRL_DONT_USE_RATE_MASK 0
++#endif
++
+ #include <net/page_pool/helpers.h>
+ #include "util.h"
+ #include "testmode.h"

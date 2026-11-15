@@ -1,0 +1,7 @@
+# Driver tree cloned by scripts/install.sh
+/mt7902/
+
+# Patch backups created by apply-patches.sh
+*.bak
+*.orig
+*.rej

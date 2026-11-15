@@ -1,0 +1,6 @@
+# Keep shell scripts and patches byte-identical to what Linux expects.
+*.sh    text eol=lf
+*.patch text eol=lf
+
+# Everything else may follow the platform default.
+* text=auto

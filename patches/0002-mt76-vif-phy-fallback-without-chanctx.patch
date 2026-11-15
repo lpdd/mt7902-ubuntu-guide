@@ -1,0 +1,24 @@
+--- a/src/mac80211.c
++++ b/src/mac80211.c
+@@ -869,6 +869,21 @@
+ 		return hw->priv;
+ #endif
+
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(6, 15, 0))
++	/*
++	 * Backport fix: kernels < 6.15 have no wiphy->n_radio, so the
++	 * upstream early return "if (!hw->wiphy->n_radio) return hw->priv;"
++	 * is compiled out.  mt7902 is single-radio, i.e. always the n_radio==0
++	 * case, so fall back to the main phy when no chanctx is assigned.
++	 * Without this, firmware without CNM support runs mac80211 with
++	 * use_chanctx == false, mlink->ctx stays NULL and mt76_sta_state()
++	 * fails with -EINVAL:
++	 *   wlp8s0: failed to insert STA entry for the AP (error -22)
++	 */
++	if (!mlink->ctx)
++		return hw->priv;
++#endif
++
+ 	if (!mlink->ctx)
+ 		return NULL;
+
