@@ -1,5 +1,7 @@
 # Ubuntu 22.04（内核 6.8）下的 MediaTek MT7902 无线网卡配置指南
 
+[English](README.md) | **简体中文**
+
 本仓库记录在 Ubuntu 22.04 LTS（6.8 HWE 内核）上驱动 MediaTek MT7902
 PCIe 无线网卡的完整步骤，使用已归档的
 [`hmtheboy154/mt7902`](https://github.com/hmtheboy154/mt7902) 外部驱动，
@@ -351,7 +353,8 @@ sudo dpkg -C              # 检查遗留问题
 
 ## 许可
 
-驱动源码为 GPL-2.0。本仓库中的补丁与脚本为 GPL-2.0-only。
+驱动源码为 GPL-2.0。本仓库中的补丁与脚本为 GPL-2.0-only，全文见
+[LICENSE](LICENSE)。
 
 ## 贡献
 

@@ -1,5 +1,7 @@
 # MediaTek MT7902 Wi-Fi on Ubuntu 22.04 (kernel 6.8)
 
+**English** | [简体中文](README.zh-CN.md)
+
 A practical setup guide for the MediaTek MT7902 PCIe Wi-Fi card on Ubuntu
 22.04 LTS with the 6.8 HWE kernel, using the (now archived)
 [`hmtheboy154/mt7902`](https://github.com/hmtheboy154/mt7902) out-of-tree
@@ -366,7 +368,7 @@ The firmware is included in the driver repository (`firmware/`), so
 ## License
 
 The driver source is GPL-2.0. The patches and scripts in this repository
-are GPL-2.0-only.
+are GPL-2.0-only — see [LICENSE](LICENSE).
 
 ## Contributing
 
